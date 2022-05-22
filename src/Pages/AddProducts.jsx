@@ -3,11 +3,12 @@ import { addDoc, collection } from "firebase/firestore/lite";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { firestore, storage } from "../config/firebase";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const AddProducts = () => {
-  const [downloadURL, setDownloadURL] = useState("");
+  const [downloadURLs, setDownloadURL] = useState("");
   const [states, setStates] = useState({});
-
+let navigate = useNavigate();
   const handleUpload = (e) => {
     let file = e.target.files[0];
 
@@ -45,7 +46,7 @@ const AddProducts = () => {
   const addDocsInFirestore = async (user) => {
     const collectionName = "Products";
     const docsCollectionRef = collection(firestore, collectionName);
-    let { productName, category, price, quantity, description, downloadURL } =
+    let { productName, category, price, quantity, description, downloadURLs } =
       states;
 
     let formData = {
@@ -55,7 +56,7 @@ const AddProducts = () => {
       quantity,
       description,
     };
-    formData.imgUrl = downloadURL;
+    formData.imgUrl = downloadURLs;
     console.log(formData);
     try {
       const docRef = await addDoc(docsCollectionRef, formData);
@@ -154,7 +155,7 @@ const AddProducts = () => {
               onChange={handleUpload}
               name="image"
             />
-            <button className="btn btn-dark text-white fw-bolder w-100 mt-5">
+            <button className="btn btn-dark text-white fw-bolder w-100 mt-5" onClick={() => navigate('/Login')}>
               Add Item
             </button>
           </form>
