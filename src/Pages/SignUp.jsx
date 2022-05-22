@@ -98,7 +98,7 @@ const Signup = () => {
   return (
     <div className="">
       <div className="row">
-        <div className="mt-5 mx-auto col-5 col-md-8 border rounded-3 shadow">
+        <div className="mt-5 mx-auto col-sm-10 col-md-8 border rounded-3 shadow">
           <form className="mx-3 my-3" onSubmit={register}>
             <div className="textSection">
               <h1 className="text-center mt-3 fw-bolder">Sign Up</h1>
@@ -136,7 +136,7 @@ const Signup = () => {
                     Password :
                   </label>
                   <input
-                    type="text"
+                    type="password"
                     className="form-control"
                     placeholder="Password..."
                     name="password"
@@ -148,7 +148,7 @@ const Signup = () => {
                     Confirm Password :
                   </label>
                   <input
-                    type="text"
+                    type="password"
                     className="form-control"
                     placeholder="Confirm Password..."
                     name="confirmPassword"
