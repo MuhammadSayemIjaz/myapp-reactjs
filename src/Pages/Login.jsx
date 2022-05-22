@@ -59,7 +59,7 @@ const Login = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="container pt-5">
                 <div className="mt-5 mx-auto col-lg-4 col-md-8 col-sm-11 border rounded-3 shadow">
                     {/* <p className='text-center'>Current user = {user?.email}</p> */}
                     <form className='mx-5 my-5' onSubmit={login}>
@@ -68,7 +68,7 @@ const Login = () => {
                         <input type="text" className='form-control' placeholder='Email...' onChange={(e) => setLoginEmail(e.target.value)} />
                         <label htmlFor="Name" className='form-label mt-3 fw-bolder'>Password :</label>
                         <input type="text" className='form-control' placeholder='Password...' onChange={(e) => setLoginPass(e.target.value)} />
-                        <button className='btn btn-primary w-100 mt-5'>Login</button>
+                        <button className='btn btn-dark text-white fw-bolder w-100 mt-5'>Login</button>
                         <div className="newUserSection mt-5 text-center">
                             <p>New Customer ? <NavLink to={"/SignUp"} style={{
                                 textDecoration: "none",

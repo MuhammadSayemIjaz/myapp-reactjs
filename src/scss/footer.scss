@@ -1,0 +1,13 @@
+.footerLinks{
+    li{
+        list-style: none;
+        cursor: pointer;
+    }
+    .footer-link{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    .footer-link:hover{
+        color: #FF4200;
+    }
+} 

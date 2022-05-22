@@ -6,7 +6,7 @@ import "../../scss/navbar.scss";
 const Navigation = () => {
   return (
     <>
-      <Navbar expand="md" className="bg-dark">
+      <Navbar fixed="top" expand="md" className="bg-dark navbar-section">
         <Container>
           <Navbar.Brand className={"text-white fw-bolder fs-2"}>
             LOGO
@@ -21,9 +21,9 @@ const Navigation = () => {
               <i className="fa-solid fa-house mx-2"></i>
                 Home
               </NavLink>
-              <NavLink to={"/Aboutus"} className={"text-white nav-link fs-5 links"}>
-              <i className="fa-solid fa-people-group mx-2"></i>
-                Aboutus
+              <NavLink to={"/AddProducts"} className={"text-white nav-link fs-5 links"}>
+              <i className="fa-solid fa-plus mx-2"></i>
+                Add Products
               </NavLink>
               <NavLink to={"/Contact"} className={"text-white nav-link fs-5 links"}>
               <i className="fa-solid fa-phone mx-2"></i>

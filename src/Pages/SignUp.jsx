@@ -96,7 +96,7 @@ const Signup = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container pt-5">
         <div className="mt-5 mx-auto col-sm-12 col-md-8 border rounded-3 shadow">
           <form className="mx-3 my-3" onSubmit={register}>
             <div className="textSection">
@@ -221,7 +221,7 @@ const Signup = () => {
               </div>
             </div>
             <div className="container mx-4 text-center">
-              <button className="btn btn-primary w-50 mt-5 fw-bolder">Sign Up</button>
+              <button className="btn btn-dark text-white w-50 mt-5 fw-bolder">Sign Up</button>
             </div>
             <div className="newUserSection mt-5 text-center">
               <p>Already Have An Account ?</p>

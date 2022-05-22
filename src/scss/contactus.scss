@@ -1,0 +1,159 @@
+:root{
+    --Demo-color: white;
+    --navbar-color: black;
+}
+.feedback-section{
+    height: 40rem;
+    .feedback{
+        width: 85%;
+        background: var(--navbar-color);
+        border-radius: 6px;
+        padding: 20px 60px 30px 40px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .left-side{
+                width: 25%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 15px;
+                position: relative;
+                .details{
+                    margin: 14px;
+                    text-align: center;
+                    i{
+                        font-size: 30px;
+                        color: var(--Demo-color);
+                        margin-bottom: 10px;
+                      }
+                      .topic{
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: var(--Demo-color);
+                      }
+                      .text-one,.text-two{
+                        font-size: 14px;
+                        color: var(--Demo-color);
+                      }
+                  }
+                  
+            }
+            .left-side::before{
+                content: '';
+                position: absolute;
+                height: 70%;
+                width: 2px;
+                right: -15px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .right-side{
+                width: 75%;
+                margin-left: 75px;
+            }
+            .topic-text{
+                font-size: 23px;
+                font-weight: 600;
+                color: var(--Demo-color);
+            }
+            .right-side{
+                .input-box{
+                    height: 50px;
+                    width: 100%;
+                    margin: 12px 0;
+                    input,textarea{
+                        height: 100%;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        font-size: 16px;
+                        background: #F0F1F8;
+                        border-radius: 6px;
+                        padding: 0 15px;
+                        resize: none;
+                      }
+                      textarea{
+                        padding-top: 6px;
+                      }
+                  }
+                  .message-box{
+                    min-height: 110px;
+                  }
+                  .button{
+                    display: inline-block;
+                    margin-top: 12px;
+                    input[type="button"]{
+                        color: var(--Demo-color);
+                        font-size: 18px;
+                        outline: none;
+                        border: none;
+                        padding: 8px 16px;
+                        border-radius: 6px;
+                        background: #3e2093;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
+                    input[type="button"]:hover{
+                        background: #5029bc;
+                      }
+                  }
+            } 
+        }
+        .feedback-btn{
+            color: var(--Demo-color);
+            background-color: var(--Navbar-color);
+            font-weight: 700 !important;
+            border: 1px solid var(--Demo-color);
+          }
+          .feedback-btn:hover{
+            color: var(--navbar-color);
+            background-color: var(--Demo-color);
+          }
+          
+          .input-group-prepend{
+            background-color: var(--navbar-color);
+            color: var(--Demo-color);
+          }
+    }
+
+}
+
+
+  @media (max-width: 950px) {
+    .feedback{
+      width: 90%;
+      padding: 30px 40px 40px 35px ;
+    }
+    .feedback .content .right-side{
+     width: 75%;
+     margin-left: 55px;
+  }
+  }
+  @media (max-width: 820px) {
+    .feedback{
+      margin: 40px 0;
+      height: 100%;
+    }
+    .feedback .content{
+      flex-direction: column-reverse;
+    }
+   .feedback .content .left-side{
+     width: 100%;
+     flex-direction: row;
+     margin-top: 40px;
+     justify-content: center;
+     flex-wrap: wrap;
+   }
+   .feedback .content .left-side::before{
+     display: none;
+   }
+   .feedback .content .right-side{
+     width: 100%;
+     margin-left: 0;
+   }
+  }
