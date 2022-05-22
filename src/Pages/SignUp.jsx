@@ -3,8 +3,8 @@ import "../scss/login.scss";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, firestore } from "../config/firebase";
 import { toast } from "react-toastify";
-import { collection, setDoc , doc } from "firebase/firestore/lite";
-// import { serverTimestamp , setDoc } from 'firebase/firestore/lite';
+import { collection, setDoc, doc } from "firebase/firestore/lite";
+import { NavLink } from "react-router-dom";
 
 const Signup = () => {
   const [states, setStates] = useState({});
@@ -96,9 +96,9 @@ const Signup = () => {
   };
 
   return (
-    <div className="">
-      <div className="row">
-        <div className="mt-5 mx-auto col-sm-10 col-md-8 border rounded-3 shadow">
+    <>
+      <div className="container">
+        <div className="mt-5 mx-auto col-sm-12 col-md-8 border rounded-3 shadow">
           <form className="mx-3 my-3" onSubmit={register}>
             <div className="textSection">
               <h1 className="text-center mt-3 fw-bolder">Sign Up</h1>
@@ -221,17 +221,22 @@ const Signup = () => {
                 </div>
               </div>
             </div>
-            <div className="buttonSection mx-4">
-              <button className="btn btn-primary w-100 mt-5 ">Sign Up</button>
+            <div className="container mx-4 text-center">
+              <button className="btn btn-primary w-50 mt-5 fw-bolder">Sign Up</button>
             </div>
             <div className="newUserSection mt-5 text-center">
-              <p>Already have and Account ?</p>
-              <p>Login</p>
+              <p>Already Have An Account ?</p>
+              <NavLink to={"/Login"}
+              className="my-3"
+                style={{
+                  textDecoration: "none",
+                  color: "blue",
+                }}>Login</NavLink>
             </div>
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
