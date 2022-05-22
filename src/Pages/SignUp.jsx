@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../scss/login.scss";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, firestore } from "../config/firebase";
 import { toast } from "react-toastify";

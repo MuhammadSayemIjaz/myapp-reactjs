@@ -3,7 +3,6 @@ import {onAuthStateChanged ,signInWithEmailAndPassword} from 'firebase/auth';
 import {auth} from '../config/firebase';
 import { toast } from "react-toastify";
 import { NavLink ,useNavigate } from "react-router-dom";
-import '../scss/login.scss';
 
 const Login = () => {
 

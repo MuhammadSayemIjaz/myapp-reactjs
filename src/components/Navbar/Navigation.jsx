@@ -17,36 +17,36 @@ const Navigation = () => {
           />
           <Navbar.Collapse id="basic-navbar-nav" className="text-white">
             <Nav className="mx-auto">
-              <NavLink to={"/"} className={"text-white nav-link fs-5"}>
+              <NavLink to={"/"} className={"text-white nav-link fs-5 links"}>
               <i className="fa-solid fa-house mx-2"></i>
                 Home
               </NavLink>
-              <NavLink to={"/Aboutus"} className={"text-white nav-link fs-5"}>
+              <NavLink to={"/Aboutus"} className={"text-white nav-link fs-5 links"}>
               <i className="fa-solid fa-people-group mx-2"></i>
                 Aboutus
               </NavLink>
-              <NavLink to={"/Contact"} className={"text-white nav-link fs-5"}>
+              <NavLink to={"/Contact"} className={"text-white nav-link fs-5 links"}>
               <i className="fa-solid fa-phone mx-2"></i>
                 Contact
               </NavLink>
-              <NavLink to={"/Login"} className={"text-white nav-link fs-5"}>
+              <NavLink to={"/Login"} className={"text-white nav-link fs-5 links"}>
               <i className="fa-solid fa-right-to-bracket mx-2"></i>
                 Login
               </NavLink>
-              <NavLink to={"/SignUp"} className={"text-white nav-link fs-5"}>
+              <NavLink to={"/SignUp"} className={"text-white nav-link fs-5 links"}>
               <i className="fa-solid fa-right-from-bracket mx-2"></i>
                 SignUp
               </NavLink>
             </Nav>
             <Nav>
-              <Nav.Link className="text-white fs-4">
+              <Nav.Link className="text-white fs-4 links">
               <i className="fa-solid fa-heart mx-2"></i>
               </Nav.Link>
-              <Nav.Link className="text-white fs-4">
-              <i className="fa-solid fa-right-from-bracket mx-2"></i>
+              <Nav.Link className="text-white fs-4 links">
+              <i className="fa-solid fa-cart-shopping mx-2"></i>
               </Nav.Link>
-              <Nav.Link className="text-white fs-4">
-              <i className="fa-solid fa-right-from-bracket mx-2"></i>
+              <Nav.Link className="text-white fs-4 links">
+              <i className="fa-solid fa-user mx-2"></i>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
